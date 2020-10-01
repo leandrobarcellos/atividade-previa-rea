@@ -1,0 +1,38 @@
+<div>
+  <div class="container mt-3">
+    <div class="card mb-3">
+      <div class="card-header">
+        Cálculo da Freqüencia Cardíaca Máxima
+      </div>
+      <div class="card-body">
+        <form [formGroup]="form">
+          <div class="row">
+            <div class="col-4">
+              <label for="name">Nome</label>
+              <input type="text" formControlName="nome" id="name" class="form-control">
+            </div>
+            <div class="col-4">
+              <label for="idade">Idade</label>
+              <input type="number" formControlName="idade" id="idade" class="form-control">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class=" container">
+    <div class="card">
+      <div class="card-header">
+        Olá {{ nome.value }}. A seguir estão suas faixas de freqüencia cardíaca por objetivo.
+      </div>
+      <div class="card-body">
+        <p>Máxima: {{ maxima }}</p>
+        <p>Condicionamento: {{ condicionamento }}</p>
+        <p>Queima de Gordura: {{ queima }}</p>
+      </div>
+      <div class="card-footer min-h-50">
+        <span id="spanText">{{ textoMotivacional() }}</span>
+      </div>
+    </div>
+  </div>
+</div>
